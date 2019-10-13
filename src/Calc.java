@@ -1,7 +1,7 @@
-class WhichQuarter {
+class Calc {
     String quarterNr;
 
-    String whichQuarter(Point point) {
+    private String whichQuarter(Point point) {
         if (point.getX() > 0 && point.getY() > 0) {
             quarterNr = " w I ćwiartce układu współrzędnych.";
         } else if (point.getX() < 0 && point.getY() > 0) {
@@ -17,6 +17,7 @@ class WhichQuarter {
     }
 
     public String getInfo(Point point) {
+        quarterNr = whichQuarter(point);
         return "Punkt " + point.getX() + "," + point.getY() + " leży w " + quarterNr;
     }
 }
